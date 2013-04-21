@@ -1,7 +1,9 @@
 class DishesController < ApplicationController
   # GET /dishes
   # GET /dishes.json
+  
   def index
+  
     @dishes = Dish.all
 
     respond_to do |format|
@@ -10,10 +12,14 @@ class DishesController < ApplicationController
     end
   end
 
+  def search
+    @dishes= Dish.dish_search(params[:search])
+  end
+
   # GET /dishes/1
   # GET /dishes/1.json
   def show
-    @dish = Dish.find(params[:id])
+    @dishes = Dish.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,5 +1,9 @@
 VegetarianRestaurantApp::Application.routes.draw do
-  resources :dishes
+  resources :dishes do
+    collection do
+      post 'search'
+    end
+  end
 
 
   resources :restaurants
