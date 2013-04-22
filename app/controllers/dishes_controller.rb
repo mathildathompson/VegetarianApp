@@ -2,18 +2,17 @@ class DishesController < ApplicationController
   # GET /dishes
   # GET /dishes.json
   
-  def index
+  # def index
   
-    @dishes = Dish.all
+  #   @dishes = Dish.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @dishes }
-    end
-  end
-
+  #   respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @dishes }
+  #   end
+  
   def search
-    @dishes= Dish.dish_search(params[:search])
+    @dishes= Dish.dish_search(params[:name].gsub(" ", "%20"), params[:city].gsub(" ", "%20"))
   end
 
   # GET /dishes/1
@@ -38,10 +37,8 @@ class DishesController < ApplicationController
   #   end
   # end
 
-  # # GET /dishes/1/edit
-  # def edit
-  #   @dish = Dish.find(params[:id])
-  # end
+  # GET /dishes/1/edit
+ 
 
   # # POST /dishes
   # # POST /dishes.json

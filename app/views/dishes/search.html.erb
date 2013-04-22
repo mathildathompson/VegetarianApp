@@ -1,8 +1,15 @@
-<% @dishes.each do |d|  %>
-<ul>
-	<li>Dish Name: <%= d.name %></li>
-	<li>Description: <%= d.description %></li>
-	<li>Price: <%= d.price %></li>
-</ul>
-<% end %>
+<h1> Vegetarian Dish Choices </h1>
+	<% i = 0 %>
+	<% while i < 5 %>
+		<% @dishes.each do |d|  %>
+			<% i += 1 %>
+				<ul>
+					<li>Dish Name: <%= d.name %></li> 
+					<li>Description: <%= d.description %></li>
+					<li>Price: <%= d.price %></li>
+					<li>Restaurant Name: <%= d.restaurant_name  %></li>
+					<li>Address: <%= d.street_address %></li>
+				</ul>
+		<% end %>
+	<% end %>
 

@@ -64,6 +64,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
     multi_xml (0.5.3)
+    pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -130,6 +131,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   httparty
   jquery-rails
+  pg
   pry
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
